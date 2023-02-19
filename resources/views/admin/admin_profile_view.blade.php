@@ -10,7 +10,11 @@
                   <p class="mg-b-20 mg-sm-b-30">Places an image to the top of the card.</p>
     
                   <div class="card bd-0 wd-xs-300">
-                    <img class="card-img-top img-fluid" src="{{ asset('backend/img/img12.jpg') }}" alt="Image">
+                    <img 
+                        class="card-img-top img-fluid"
+                        src="{{ (!empty($adminData->profile_image)) ? url('upload/admin_images/'.$adminData->profile_image) : url('upload/no_image.jpg') }}" 
+                        alt="Profile Image for user"
+                    />
                     <div class="card-body bd bd-t-0">
                       <h6>Name : <span class="tx-dark"> {{ $adminData->name }}</span> </h6>
                       <h6>Username : <span class="tx-dark"> {{ $adminData->username }}</span> </h6>

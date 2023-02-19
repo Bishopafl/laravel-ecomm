@@ -43,7 +43,7 @@
                         <div class="row row-xs mg-t-20">
                             <label class="col-sm-4 form-control-label">Current Picture:</label>
                             <div class="col-sm-8 mg-t-10 mg-sm-t-0">
-                                <img id="showImage" class="card-img-top img-fluid" src="{{ asset('backend/img/img12.jpg') }}" alt="Image">
+                                <img id="showImage" class="card-img-top img-fluid" src="{{ (!empty($adminEditData->profile_image)) ? url('upload/admin_images/'.$adminEditData->profile_image) : url('upload/no_image.jpg') }}" alt="Image">
                             </div>
                         </div><!-- row -->
 
