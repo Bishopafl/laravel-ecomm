@@ -40,6 +40,7 @@ Route::controller(PagesController::class)->group(function () {
  */
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
+    Route::get('/admin/profile', 'Profile')->name('admin.profile');
     
 });
 
