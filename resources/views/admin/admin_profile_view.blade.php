@@ -2,8 +2,8 @@
 @section('admin')
 
 <div class="page-content">
-    <div class="container-fluid">
-        <div class="row py-4">
+    <div class="container-fluid py-4">
+        <div class="row">
             <div class="col-lg-6">
                 <div class="card pd-20 pd-sm-40">
                   <h6 class="card-body-title">Profile Information</h6>
@@ -16,7 +16,7 @@
                       <h6>Username : <span class="tx-dark"> {{ $adminData->username }}</span> </h6>
                       <h6>Email : <span class="tx-dark"> {{ $adminData->email }}</span> </h6>
                       <hr>
-                      <a class="btn btn-warning btn-block mg-b-10" href="">Edit Profile</a>
+                      <a class="btn btn-warning btn-block mg-b-10" href="{{ route('edit.profile') }}">Edit Profile</a>
                       <span class="tx-12">Last updated: {{ $adminData->updated_at }}</span>
                     </div>
                   </div>
