@@ -1,25 +1,70 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Starlight">
+    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/starlight">
+    <meta property="og:title" content="Starlight">
+    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+    <meta property="og:image" content="http://themepixels.me/starlight/img/starlight-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/starlight/img/starlight-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    <!-- Meta -->
+    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="author" content="ThemePixels">
+
+    <title>Starlight Responsive Bootstrap 4 Admin Template</title>
+
+    <!-- vendor css -->
+    <link href="{{ asset('backend/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/lib/Ionicons/css/ionicons.css') }}" rel="stylesheet">
+
+
+    <!-- Starlight CSS -->
+    <link rel="stylesheet" href="{{ asset('backend/css/starlight.css') }}">
+  </head>
+
+  <body>
+
+    <div class="d-flex align-items-center justify-content-center bg-sl-primary ht-100v">
+
+      <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white">
+        <div class="signin-logo tx-center tx-24 tx-bold tx-inverse">{{ env('APP_NAME') }} <span class="tx-info tx-normal">admin</span></div>
+        <div class="tx-center mg-b-60">Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</div>
+
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <form method="POST" action="{{ route('password.email') }}">
+            @csrf
+
+            <div class="form-group">
+                <input id="email" class="form-control" type="email" name="email" placeholder="Enter your email" required autofocus />
+            </div><!-- form-group -->
+            
+            <button type="submit" class="btn btn-info btn-block">Email Password Reset Link</button>
+        </form>
+
+      </div><!-- login-wrapper -->
+    </div><!-- d-flex -->
+
+    <script src="{{ asset('backend/lib/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('backend/lib/popper.js/popper.js') }}"></script>
+    <script src="{{ asset('backend/lib/bootstrap/bootstrap.js') }}"></script>
+
+  </body>
+</html>
