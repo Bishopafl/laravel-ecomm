@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::controller(DemoController::class)->group(function () {
+Route::controller(PagesController::class)->group(function () {
     Route::get('/about', 'About')->name('about.page')->middleware('check');
     Route::get('/contact', 'Contact')->name('contact.page');
 });
