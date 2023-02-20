@@ -20,6 +20,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
+        toastr('Admin User Logged Out Successfully', 'success');
         return redirect('/login');
     }
 
@@ -50,7 +51,7 @@ class AdminController extends Controller
             $adminData['profile_image'] = $filename;
         }
         $adminData->save();
-
+        toastr('Admin Profile Updated Successfully', 'success');
         return  redirect()->route('admin.profile');
     }
 }

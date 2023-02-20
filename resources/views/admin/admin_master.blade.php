@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Starlight">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/starlight">
-    <meta property="og:title" content="Starlight">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@themepixels">
+  <meta name="twitter:creator" content="@themepixels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starlight">
+  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="twitter:image" content="http://themepixels.me/starlight/img/starlight-social.png">
 
-    <meta property="og:image" content="http://themepixels.me/starlight/img/starlight-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/starlight/img/starlight-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
+  <!-- Facebook -->
+  <meta property="og:url" content="http://themepixels.me/starlight">
+  <meta property="og:title" content="Starlight">
+  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
 
-    <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="author" content="ThemePixels">
+  <meta property="og:image" content="http://themepixels.me/starlight/img/starlight-social.png">
+  <meta property="og:image:secure_url" content="http://themepixels.me/starlight/img/starlight-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
 
-    <title>Starlight Responsive Bootstrap 4 Admin Template</title>
+  <!-- Meta -->
+  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="author" content="ThemePixels">
 
-    <!-- vendor css -->
-    <link href="{{ asset('backend/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('backend/lib/Ionicons/css/ionicons.css') }}" rel="stylesheet">
-    <link href="{{ asset('backend/lib/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet">
-    <link href="{{ asset('backend/lib/rickshaw/rickshaw.min.css') }}" rel="stylesheet">
+  <title>Starlight Responsive Bootstrap 4 Admin Template</title>
 
-    <!-- Starlight CSS -->
-    <link rel="stylesheet" href="{{ asset('backend/css/starlight.css') }}">
-  </head>
-  <body>
+  <!-- vendor css -->
+  <link href="{{ asset('backend/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ asset('backend/lib/Ionicons/css/ionicons.css') }}" rel="stylesheet">
+  <link href="{{ asset('backend/lib/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet">
+  <link href="{{ asset('backend/lib/rickshaw/rickshaw.min.css') }}" rel="stylesheet">
 
-    <!-- ########## START: LEFT PANEL ########## -->
-    @include('admin.body.sidebar')
-    <!-- ########## END: LEFT PANEL ########## -->
+  <!-- Starlight CSS -->
+  <link rel="stylesheet" href="{{ asset('backend/css/starlight.css') }}">
 
-    <!-- ########## START: HEAD PANEL ########## -->
-    @include('admin.body.header')
-    <!-- ########## END: HEAD PANEL ########## -->
+  <!-- Additional Styles -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+</head>
 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="sl-mainpanel">
-      @yield('admin')
-      
-      @include('admin.body.footer')
-    </div><!-- sl-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+<body>
 
-    <script src="{{ asset('backend/lib/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('backend/lib/popper.js/popper.js') }}"></script>
-    <script src="{{ asset('backend/lib/bootstrap/bootstrap.js') }}"></script>
-    <script src="{{ asset('backend/lib/jquery-ui/jquery-ui.js') }}"></script>
-    <script src="{{ asset('backend/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js') }}"></script>
-    <script src="{{ asset('backend/lib/jquery.sparkline.bower/jquery.sparkline.min.js') }}"></script>
-    <script src="{{ asset('backend/lib/d3/d3.js') }}"></script>
-    <script src="{{ asset('backend/lib/rickshaw/rickshaw.min.js') }}"></script>
-    <script src="{{ asset('backend/lib/chart.js/Chart.js') }}"></script>
-    <script src="{{ asset('backend/lib/Flot/jquery.flot.js') }}"></script>
-    <script src="{{ asset('backend/lib/Flot/jquery.flot.pie.js') }}"></script>
-    <script src="{{ asset('backend/lib/Flot/jquery.flot.resize.js') }}"></script>
-    <script src="{{ asset('backend/lib/flot-spline/jquery.flot.spline.js') }}"></script>
+  <!-- ########## START: LEFT PANEL ########## -->
+  @include('admin.body.sidebar')
+  <!-- ########## END: LEFT PANEL ########## -->
 
-    <script src="{{ asset('backend/js/starlight.js') }}"></script>
-    <script src="{{ asset('backend/js/ResizeSensor.js') }}"></script>
-    <script src="{{ asset('backend/js/dashboard.js') }}"></script>
-  </body>
+  <!-- ########## START: HEAD PANEL ########## -->
+  @include('admin.body.header')
+  <!-- ########## END: HEAD PANEL ########## -->
+
+  <!-- ########## START: MAIN PANEL ########## -->
+  <div class="sl-mainpanel">
+    @yield('admin')
+
+    @include('admin.body.footer')
+  </div><!-- sl-mainpanel -->
+  <!-- ########## END: MAIN PANEL ########## -->
+
+  <script src="{{ asset('backend/lib/jquery/jquery.js') }}"></script>
+  <script src="{{ asset('backend/lib/popper.js/popper.js') }}"></script>
+  <script src="{{ asset('backend/lib/bootstrap/bootstrap.js') }}"></script>
+  <script src="{{ asset('backend/lib/jquery-ui/jquery-ui.js') }}"></script>
+  <script src="{{ asset('backend/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js') }}"></script>
+  <script src="{{ asset('backend/lib/jquery.sparkline.bower/jquery.sparkline.min.js') }}"></script>
+  <script src="{{ asset('backend/lib/d3/d3.js') }}"></script>
+  <script src="{{ asset('backend/lib/rickshaw/rickshaw.min.js') }}"></script>
+  <script src="{{ asset('backend/lib/chart.js/Chart.js') }}"></script>
+  <script src="{{ asset('backend/lib/Flot/jquery.flot.js') }}"></script>
+  <script src="{{ asset('backend/lib/Flot/jquery.flot.pie.js') }}"></script>
+  <script src="{{ asset('backend/lib/Flot/jquery.flot.resize.js') }}"></script>
+  <script src="{{ asset('backend/lib/flot-spline/jquery.flot.spline.js') }}"></script>
+
+  <script src="{{ asset('backend/js/starlight.js') }}"></script>
+  <script src="{{ asset('backend/js/ResizeSensor.js') }}"></script>
+  <script src="{{ asset('backend/js/dashboard.js') }}"></script>
+
+  <!-- Additional scripts -->
+  @jquery
+  @toastr_js
+  @toastr_render
+  
+</body>
+
 </html>
